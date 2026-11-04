@@ -1,12 +1,12 @@
 {
   "name": "xmem",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "xmem",
-      "version": "0.0.1",
+      "version": "0.1.0",
       "dependencies": {
         "@modelcontextprotocol/sdk": "1.25.2",
         "ajv": "8.20.0",
