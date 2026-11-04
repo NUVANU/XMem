@@ -1,0 +1,58 @@
+{
+  "name": "xmem",
+  "version": "0.0.1",
+  "private": true,
+  "files": [
+    "dist/src/",
+    "README.md",
+    "LICENSE",
+    "docs/RELEASE-SUPPORT.md",
+    "docs/CODEX-INTEGRATION.md",
+    "docs/xmem-mcp.example.json",
+    "docs/LOCAL-IO-USAGE.md",
+    "docs/LOCAL-IO-REPAIR-REGISTER.md",
+    "docs/STANDALONE-SEMI-AUTO.md",
+    "docs/MCP-CONTEXT-PROJECTION.md",
+    "docs/COMPANION-CONTRACT.md",
+    "docs/ENGINEERING-MEMORY.md",
+    "docs/ENGINEERING-MCP.md",
+    "npm-shrinkwrap.json"
+  ],
+  "type": "module",
+  "engines": {
+    "node": "24.20.x"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit"
+  },
+  "exports": {
+    ".": "./dist/src/index.js",
+    "./local": "./dist/src/local-api.js",
+    "./standalone": "./dist/src/standalone.js",
+    "./storage-location": "./dist/src/storage-location.js",
+    "./companion-client": "./dist/src/companion-client.js",
+    "./companion-contract": "./dist/src/companion-contract.js",
+    "./shared-memory": "./dist/src/shared-memory.js",
+    "./engineering-memory": "./dist/src/engineering-memory.js",
+    "./engineering-mcp-contract": "./dist/src/engineering-mcp-contract.js"
+  },
+  "bin": {
+    "xmem": "dist/src/cli.js",
+    "xmem-companion": "dist/src/companion.js",
+    "xmem-engineering": "dist/src/engineering-companion.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.25.2",
+    "ajv": "8.20.0",
+    "better-sqlite3": "13.0.3",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "9.6.0",
+    "@types/node": "24.13.3",
+    "tsx": "4.23.13",
+    "typescript": "7.0.2"
+  },
+  "license": "MPL-2.0"
+}
